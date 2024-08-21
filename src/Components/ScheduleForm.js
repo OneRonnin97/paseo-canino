@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './scheduleform.css'
+
 
 export default function ScheduleForm({ onAddWalk }) {
   const [date, setDate] = useState('');
@@ -22,27 +24,32 @@ export default function ScheduleForm({ onAddWalk }) {
     setWalks(walks.filter((walk) => walk.id !== walkId));
   };
   return (
-    <div>
+    <div className='container'>
+
+    
+    <div className='form-paseo'>
+        <h2>Programar Paseo</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-            <label>Nombre Mascota: </label>
+        <div className='form-group'>
+            <label className='label-form'>Nombre Mascota: </label>
             <input type="text" value={text} onChange={(e) => setText(e.target.value)} required/>
         </div>
-        <div>
-          <label>Fecha:</label>
+        <div className='form-group'>
+          <label className='label-form'>Fecha:</label>
           <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
         </div>
-        <div>
-          <label>Hora inicio:</label>
+        <div className='form-group'>
+          <label className='label-form'>Hora inicio:</label>
           <input type="time" value={timeStart} onChange={(e) => setTimeStart(e.target.value)} required />
         </div>
-        <div>
-          <label>Hora termino:</label>
+        <div className='form-group'>
+          <label className='label-form'>Hora termino:</label>
           <input type="time" value={timeEnd} onChange={(e) => setTimeEnd(e.target.value)} required />
         </div>
         <button type="submit">Agregar Paseo</button>
+        
       </form>
-      <ul>
+      <ul className='lista-paseos'>
         <h3>Lista de Paseos</h3>
         {walks.map((walk) => (
           <li key={walk.id}>
@@ -51,6 +58,7 @@ export default function ScheduleForm({ onAddWalk }) {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
