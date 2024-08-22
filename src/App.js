@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 import Home from './pages/Home'
 import ScheduleWalk from './pages/ScheduleWalk'
+import Header from './Components/Header/navbar'
 
 function App() {
   return (
     <Router>
+      <Header/>
             <div className="App">
                 
                 <Routes>
