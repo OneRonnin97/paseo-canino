@@ -1,40 +1,28 @@
-.schedule-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .form-right {
-    background: grey;
-    overflow: hidden;
-    padding: 40px 0 0 0;
-    position: relative;
-    text-align: center;
-    width: 300px;
-  }
-  
-  .form-left {
-    .puppy {
-        bottom: -5px;
-        position: absolute;
-        text-align: center;
-      
-        &:before {
-            background: grey;
-            content: "";
-            height: 100%;
-            left: 0;
-            opacity: .4;
-            position: absolute;
-            width: 100%;
-            z-index: 1;
-        }
-    }
-  
-    img {
-        filter: sepia(100%);
-        width: 70%;
-    }
+.form-right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  align-items: flex-start;
+  padding-left: 30px;
+  justify-content: center;
 }
+
+.form-left{
+  display: flex;
+    flex-direction: column;
+    width: 30%;
+    opacity: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-container{
   
+  flex-wrap: wrap;
+  min-height: 80vh;
+  width: 100%;
+  background-color: #d4e4da;
+  color: #535A77;
+  padding: 40px 0;
+}

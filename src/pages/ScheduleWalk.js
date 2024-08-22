@@ -1,5 +1,5 @@
 import React from 'react';
-import ScheduleForm from '../Components/ScheduleForm'
+import ScheduleForm from '../Components/scheduleform-right/ScheduleForm';
 import './schedulewalk.css'
 import ScheduleLeft from '../Components/schedule-left/Schedule-left';
 
@@ -13,9 +13,9 @@ export default function ScheduleWalk() {
         <div className='form-right'>
         <ScheduleForm onAddWalk={handleAddWalk} />
         </div>
-        <div className='form-left'>
+        {/* <div className='form-left'>
             <ScheduleLeft />
-        </div>
+        </div> */}
       
       
     </div>

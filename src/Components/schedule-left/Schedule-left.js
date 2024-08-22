@@ -7,7 +7,10 @@ export default function ScheduleLeft (){
 
 
     return(
-        <img className='img-form' src={perro1} />
+        <div className="schedule-left">
+            <img className='img-form' src={perro1} />
+        </div>
+        
         
     )
     
